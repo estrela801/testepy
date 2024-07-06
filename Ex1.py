@@ -10,7 +10,7 @@ while True:
 for numero in numeros:
   if numero % 2 == 0:
     pares.append(numero)
-  else:
+  else: 
     impares.append(numero)
 
 pares.sort()
