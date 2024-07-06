@@ -27,4 +27,7 @@
 produtos = {'Celular': 1500, 'câmera': 1000, 'fone de ouvido': 800, 'monitor': 2000}
 
 userAns = input('Digite um produto')
-DFGDFGDF
+
+for produto in produtos:
+    if produto == userAns:
+        print(F'O produto se lecionado foi ')
