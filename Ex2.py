@@ -28,12 +28,18 @@ produtos = {'celular': 1500, 'camera': 1000, 'fone de ouvido': 800, 'monitor': 2
 
 userAns = input('Digite um produto: ')
 userAns = userAns.lower()
-
+cadastrar = False 
 
 if userAns in produtos:
    print(f'O produto selecionado foi {userAns} e o valor é {produtos[userAns]}')
+elif userAns !=produtos : 
+   print('Talvez o produto não esteja cadastrado')
+   newItem = input('cadastrar:')
+   cadastrar = True
+   produtos.append(newItem)
+   print(produtos)
 else: 
-   print('produto não encontrado')
+   print('Obrigado por nos procurar')
 
 for produto in produtos:
     print(f'Produto: {produto}, Preço: {produtos[produto]}')
