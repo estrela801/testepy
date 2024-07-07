@@ -24,10 +24,16 @@
 
 
 
-produtos = {'Celular': 1500, 'câmera': 1000, 'fone de ouvido': 800, 'monitor': 2000}
+produtos = {'celular': 1500, 'camera': 1000, 'fone de ouvido': 800, 'monitor': 2000}
 
-userAns = input('Digite um produto')
+userAns = input('Digite um produto: ')
+userAns = userAns.lower()
+
+
+if userAns in produtos:
+   print(f'O produto selecionado foi {userAns} e o valor é {produtos[userAns]}')
+else: 
+   print('produto não encontrado')
 
 for produto in produtos:
-    if produto == userAns:
-        print(F'O produto se lecionado foi ')
+    print(f'Produto: {produto}, Preço: {produtos[produto]}')
