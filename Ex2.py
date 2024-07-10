@@ -24,22 +24,19 @@
 
 
 
-produtos = {'celular': 1500, 'camera': 1000, 'fone de ouvido': 800, 'monitor': 2000}
+produtos = {'celular': 1500, 'câmera': 1000, 'fone de ouvido': 800, 'monitor': 2000}
 
-userAns = input('Digite um produto: ')
-userAns = userAns.lower()
-cadastrar = False 
+fela = input('diga-me o produto fela da puta: ')
+if fela in produtos:
+    print(f'Essa méda {fela} custa: {produtos[fela]}')
+else:
+    print('Não tem seu fela. Cadastra ele ai desgraça')
+    prodPreco = input(f'Me diz quando custa essa merda de {fela}: ')
+    newProd = fela
+    produtos[newProd] = prodPreco
+    print('Ta aqui a disgraça da lista do que eu tenho')
+    for produto in produtos:
+        print(produto,produtos[produto])
+    print('pronto seu merda')
 
-if userAns in produtos:
-   print(f'O produto selecionado foi {userAns} e o valor é {produtos[userAns]}')
-elif userAns !=produtos : 
-   print('Talvez o produto não esteja cadastrado')
-   newItem = input('cadastrar:')
-   cadastrar = True
-   produtos.append(newItem)
-   print(produtos)
-else: 
-   print('Obrigado por nos procurar')
-
-for produto in produtos:
-    print(f'Produto: {produto}, Preço: {produtos[produto]}')
+ 
