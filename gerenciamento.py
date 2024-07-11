@@ -1,6 +1,8 @@
 import funcs as fn
 lista = []
 dic = dict()
+feita = ''
+nFeira =''
 menu = 'Menu:'
 print('''1: Adicionar tarefa
 2: Remover tarefa'
@@ -15,7 +17,7 @@ sair = False
 
 while sair == False: # se ele não disser que quer parar, ele tem que digitar uma opção
     userChoice =int(input('Escolhauma opção: '))
-   
+    
 
     if userChoice == 7:
       sair = True
@@ -32,6 +34,7 @@ while sair == False: # se ele não disser que quer parar, ele tem que digitar um
         
     if userChoice == 3:
         userAns = input('Qual deseja marcar: ')
+        feita = userAns
         fn.marcar(userAns,dic)
         
         
@@ -39,11 +42,12 @@ while sair == False: # se ele não disser que quer parar, ele tem que digitar um
         fn.mostrar(lista)
        
     if userChoice == 5:
-        fn.feita(lista)
+
+        fn.feita(dic,feita)
 
 
     if userChoice == 6:
-        print('6')
+        fn.nFeita(dic,lista)
 
     
       
