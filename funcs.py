@@ -13,7 +13,7 @@ def remove(tarefa,lista):
     
 
 def marcar(tarefa, dic):
-       dic = {}
+       dic = {} 
        dic['concluida'] = tarefa
        print(dic)
        
