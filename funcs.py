@@ -13,7 +13,7 @@ def remove(tarefa,lista):
     
 
 def marcar(tarefa, dic):
-       dic = {} 
+       dic = {}
        dic['concluida'] = tarefa
        print(dic)
        
@@ -33,3 +33,4 @@ def nFeita(dic,lista):
    nFe = dic in lista 
    lista.pop(nFe)
    print(lista)
+   print('acabou')
