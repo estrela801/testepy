@@ -35,6 +35,7 @@ while sair == False: # se ele não disser que quer parar, ele tem que digitar um
     if userChoice == 3:
         userAns = input('Qual deseja marcar: ')
         feita = userAns
+        dic.update({feita: 'concluida'})
         fn.marcar(userAns,dic)
         
         
@@ -43,7 +44,7 @@ while sair == False: # se ele não disser que quer parar, ele tem que digitar um
        
     if userChoice == 5:
 
-        fn.feita(dic,feita)
+        fn.feita(dic)
 
 
     if userChoice == 6:
